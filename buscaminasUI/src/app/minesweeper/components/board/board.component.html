@@ -1,0 +1,28 @@
+<div>
+  <div class="board-header">
+    <h1>Minesweeper</h1>
+    <button mat-fab color="white" aria-label="Setup" (click)="showSetupDialog()">
+      <mat-icon>home</mat-icon>
+    </button>
+    <hr>
+  </div>
+
+  <div class="dashboard" *ngIf="cells.length > 0" [ngClass]="{'disabled': endGame}">
+    <div class="dashboard-info">
+      <div>
+        {{numberOfRemainingFlags}} Flags      {{timePlaying}} Seconds
+      </div>
+    </div>
+    <table class="board">
+      <tr *ngFor="let row of cells; let i = index">
+        <th class="cell" *ngFor="let col of row; let j = index"
+            [ngClass]="defineCellClass(col)"
+            (click)="leftClickRevealCell(col, i, j)"
+            (contextmenu)="rightClickPutFlag($event, col, i, j)"
+        >
+          <span class="number-font" *ngIf="showNumber(col)" [ngStyle]="defineNumberColor(col)">{{col.nearMines}}</span>
+        </th>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+.board-header {
+  font-family: "Bell MT", serif;
+  color: darkblue;
+  margin: auto;
+  text-align: center;
+}
+
+.dashboard-info {
+  color: darkblue;
+  font-weight: bold;
+  text-align: center;
+}
+
+.number-font {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.dashboard {
+  font-family: "Bell MT", serif;
+  margin: 0;
+  padding: 10px;
+  user-select: none;
+  background: white;
+  border-radius: 20px;
+}
+
+.board {
+  background: #7b7b7b;
+  border: black 2px solid;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.cell {
+  width: 40px !important;
+  height: 40px !important;
+  max-width: 40px !important;
+  max-height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border: #e5e5e5 1.5px solid;
+  border-radius: 100%;
+}
+
+th:hover {
+  background-color: lightslategray;
+}
+
+.covert-cell {
+  background: #bdbdbd;
+}
+
+.uncovert-cell {
+  background: azure;
+}
+
+.marked-flag-cell {
+  background: #bdbdbd;
+  background-image: url("~src/assets/images/flag.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 30px 30px;
+}
+
+.marked-interrogant-cell {
+  background: #bdbdbd;
+  background-image: url("~src/assets/images/interrogant.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 23px 23px;
+}
+
+.mine-cell-uncovert {
+  background: azure;
+  background-position: 50% 50%;
+  background-size: 40px 25px;
+  background-image: url("~src/assets/images/mine3.png");
+  background-repeat: no-repeat;
+}
+
+.mine-cell-uncovert-lose {
+  background: red;
+  background-position: 50% 50%;
+  background-size: 40px 25px;
+  background-image: url("~src/assets/images/mine3.png");
+  background-repeat: no-repeat;
+}
+
+.mine-cell-x {
+  background: #bdbdbd;
+  background-position: 50% 50%;
+  background-size: 36px 21px;
+  background-image: url("~src/assets/images/x.png");
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,15 @@
+<div>
+  <div mat-dialog-content class="center-content">
+    <div *ngIf="data.winner">
+      <h1>You Win</h1>
+    </div>
+
+    <div *ngIf="!data.winner">
+      <h1>You Lose</h1>
+    </div>
+  </div>
+  <div mat-dialog-actions class="center-content">
+    <button mat-raised-button (click)="onNoClick()">Close</button>
+    <button mat-raised-button color="primary" (click)="playAgain()">Play Again</button>
+  </div>
+</div>

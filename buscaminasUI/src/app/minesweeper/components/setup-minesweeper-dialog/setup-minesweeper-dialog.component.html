@@ -1,0 +1,38 @@
+<h1 mat-dialog-title class="dialog-header" mat-dialog-content class="center-content"> Setup Game </h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Number Of Rows</mat-label>
+    <input
+      matInput
+      type="number"
+      [min]="minRows"
+      [max]="maxRows"
+      [(ngModel)]="data.numberOfRows"
+      (ngModelChange)="changeMinOrMaxNumberOfMine()">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Number Of Columns</mat-label>
+    <input
+      matInput
+      type="number"
+      [min]="minColumns"
+      [max]="maxColumns"
+      [(ngModel)]="data.numberOfColumns"
+      (ngModelChange)="changeMinOrMaxNumberOfMine()">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Number Of Mines</mat-label>
+    <input
+      matInput
+      type="number"
+      [min]="minMines"
+      [max]="maxMines"
+      [(ngModel)]="data.numberOfMines">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions mat-dialog-content class="center-content">
+  <button mat-raised-button (click)="onNoClick()">Close</button>
+  <button mat-raised-button color="primary" (click)="setupGame()">Setup Game</button>
+</div>
